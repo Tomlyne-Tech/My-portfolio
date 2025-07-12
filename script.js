@@ -1,32 +1,12 @@
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+// Toggle menu
+const toggleBtn = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active');
-  
-  // Toggle body scroll when menu is open
-  document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+toggleBtn.addEventListener('click', () => {
+  navbar.classList.toggle('active');
 });
 
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    menuToggle.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-});
 
-// Close menu when scrolling on mobile
-window.addEventListener('scroll', () => {
-  if (window.innerWidth <= 768) {
-    navLinks.classList.remove('active');
-    menuToggle.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-});
 
 
 // Typewriter effect (optional)
