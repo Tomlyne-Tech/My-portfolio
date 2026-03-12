@@ -110,3 +110,26 @@ filterButtons.forEach(button => {
 
 // Update copyright year automatically
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+
+//speech recognition
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+function startListening(){
+  recognition.start();
+}
+
+recognition.onresult = function(event){
+  let command = event.results[0][0].transcript.toLowerCase();
+
+  if(command.includes("who are you")){
+    document.getElementById("response").innerText = "I am Tomlyne Tech, a web developer who builds modern websites.";
+  }
+  else if(command.includes("projects")){
+    document.getElementById("response").innerText = "You can check my projects section below.";
+  }
+  else if(command.includes("contact")){
+    document.getElementById("response").innerText = "You can contact me through WhatsApp or email.";
+  }
+};
