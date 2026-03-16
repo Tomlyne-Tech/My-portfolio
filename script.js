@@ -1,12 +1,11 @@
 // Toggle menu
 
 const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelector('.nav-links');
 
 toggle.addEventListener('click', () => {
-  nav.classList.toggle('active'); // shows/hides menu on mobile
+  navLinks.classList.toggle('active'); // toggle menu visibility
 });
-
 
 // Typewriter effect (optional)
 const titles = ["Developer", "Designer", "Creator"];
