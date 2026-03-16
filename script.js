@@ -105,10 +105,7 @@ filterButtons.forEach(button => {
 });
 
 
-// Get the current year
-  const currentYear = new Date().getFullYear();
-  // Insert it into the span with id "year"
-  document.getElementById('year').textContent = 'currentYear';
+
 
 
 
