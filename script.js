@@ -1,10 +1,9 @@
 // Toggle menu
+const toggleBtn = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
 
-const toggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active'); // toggle menu visibility
+toggleBtn.addEventListener('click', () => {
+  navbar.classList.toggle('active');
 });
 
 // Typewriter effect (optional)
