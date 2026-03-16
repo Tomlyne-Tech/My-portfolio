@@ -6,7 +6,12 @@ toggleBtn.addEventListener('click', () => {
   navbar.classList.toggle('active');
 });
 
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
 
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active'); // shows/hides menu on mobile
+});
 
 
 // Typewriter effect (optional)
