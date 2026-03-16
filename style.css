@@ -64,7 +64,7 @@ body {
 }
 
 .menu-toggle {
-  display: none;
+  display: block;
   font-size: 28px;
   cursor: pointer;
   color: #fff;
